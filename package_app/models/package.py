@@ -17,6 +17,8 @@ class Package(models.Model):
     details = JSONField(null=False, blank=True, default=default_info_field)
     service_ids = models.JSONField(null=False, blank=True, default=default_info_field)
     status = models.BooleanField(default=True, blank=True)
+    created_at = models.DateTimeField(default=timezone.now, blank=True)
+
 
     def __str__(self):
         return self.id
