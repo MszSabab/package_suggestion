@@ -2,7 +2,6 @@
 
 from django.db import migrations, models
 import django.utils.timezone
-import package_app.models.package
 import package_app.models.service
 
 
@@ -17,12 +16,12 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Package',
             fields=[
-                ('id', models.CharField(blank=True, default='', max_length=30, primary_key=True, serialize=False)),
+                # ('id', models.CharField(blank=True, default='', max_length=30, primary_key=True, serialize=False)),
                 ('name', models.CharField(blank=True, default=django.utils.timezone.now, max_length=30)),
                 ('price', models.CharField(blank=True, default=django.utils.timezone.now, max_length=30)),
-                ('details', models.JSONField(blank=True, default=package_app.models.package.default_info_field)),
-                ('service_ids', models.JSONField(blank=True, default=package_app.models.package.default_info_field)),
-                ('status', models.BooleanField(blank=True, default=True)),
+                # ('details', models.JSONField(blank=True, default=package_app.models.package.default_info_field)),
+                # ('service_ids', models.JSONField(blank=True, default=package_app.models.package.default_info_field)),
+                # ('status', models.BooleanField(blank=True, default=True)),
             ],
         ),
         migrations.CreateModel(

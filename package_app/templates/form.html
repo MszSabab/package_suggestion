@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+</head>
+
+<body>
+    <form method="post">
+        <a> choosing a service and an addon are must</a>
+        <br>
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">submit</button>
+    </form>
+</body>
+
+</html>
